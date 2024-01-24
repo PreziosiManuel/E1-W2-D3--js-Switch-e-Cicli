@@ -135,7 +135,7 @@ console.log(femaleCharacters);
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
-const eyeColor = { blue: [], yellow: [], brown: [], red: [], blue_gray: [] };
+const eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
 
 console.log(eyeColor);
 /* ESERCIZIO 5
@@ -157,7 +157,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       eyeColor.red.push(starWarsCharacters[i]);
       break;
     case "blue-gray":
-      eyeColor.blue_gray.push(starWarsCharacters[i]);
+      eyeColor["blue-gray"].push(starWarsCharacters[i]);
       break;
   }
 }
@@ -191,10 +191,10 @@ let i = 0;
 let crewMass = 0;
 
 while (i < starWarsCharacters.length) {
-  crewMass += starWarsCharacters[i].mass || 0;
+  crewMass += starWarsCharacters[i].mass;
   i++;
 }
-console.log("massa equipaggio", crewMass);
+console.log("Massa equipaggio :", crewMass);
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
 
